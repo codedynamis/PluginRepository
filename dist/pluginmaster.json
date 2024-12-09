@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "AcceptsFeedback": true,
+    "ApplicableVersion": "any",
+    "AssemblyVersion": "1.0.0.0",
+    "Author": "codedynamis",
+    "CanUnloadAsync": false,
+    "Changelog": "2c1f811: Update ci.yaml\n13eb273: Update ci.yaml\n6c2f238: Update ci.yaml\n1b3eee3: Update ci.yaml\ndd8f50f: Update ToolboxPlugin.csproj\n9b8b319: Update ToolboxPlugin.json\nefc2ab6: Create ci.yaml\n4715b8f: init",
+    "DalamudApiLevel": 11,
+    "Description": "toolbox for codedynamis",
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/codedynamis/PluginRepository/master/dist/stable/ToolboxPlugin/latest.zip",
+    "IconUrl": "",
+    "ImageUrls": [],
+    "InternalName": "ToolboxPlugin",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "LastUpdated": 1733716716,
+    "LoadPriority": 0,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "Name": "ToolboxPlugin",
+    "Punchline": "ToolboxPlugin",
+    "RepoUrl": "https://github.com/codedynamis/ToolboxPlugin",
+    "Tags": [
+      "Other"
+    ]
+  }
+]
