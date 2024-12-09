@@ -1,7 +1,7 @@
 {
-  "after": "058d02504fcfac29d83ec94d805b05ca45691967",
+  "after": "7452bbc822c2f3a2d6e66b717ae00721f5c2dbd6",
   "base_ref": null,
-  "before": "2c1f8118dd5dcfac016e9f7f58d2e8f488bf96ce",
+  "before": "058d02504fcfac29d83ec94d805b05ca45691967",
   "commits": [
     {
       "author": {
@@ -15,14 +15,14 @@
         "username": "a1hena"
       },
       "distinct": true,
-      "id": "058d02504fcfac29d83ec94d805b05ca45691967",
-      "message": "fix command prefix",
-      "timestamp": "2024-12-09T13:25:22+09:00",
-      "tree_id": "659a4a56d2f2e892dd2c827128e7803025bfedcc",
-      "url": "https://github.com/codedynamis/ToolboxPlugin/commit/058d02504fcfac29d83ec94d805b05ca45691967"
+      "id": "7452bbc822c2f3a2d6e66b717ae00721f5c2dbd6",
+      "message": "Update ToolboxPlugin.csproj",
+      "timestamp": "2024-12-09T13:33:18+09:00",
+      "tree_id": "f60f5137239b3f32afafa221ab01c605f9874155",
+      "url": "https://github.com/codedynamis/ToolboxPlugin/commit/7452bbc822c2f3a2d6e66b717ae00721f5c2dbd6"
     }
   ],
-  "compare": "https://github.com/codedynamis/ToolboxPlugin/compare/2c1f8118dd5d...058d02504fcf",
+  "compare": "https://github.com/codedynamis/ToolboxPlugin/compare/058d02504fcf...7452bbc822c2",
   "created": false,
   "deleted": false,
   "forced": false,
@@ -38,11 +38,11 @@
       "username": "a1hena"
     },
     "distinct": true,
-    "id": "058d02504fcfac29d83ec94d805b05ca45691967",
-    "message": "fix command prefix",
-    "timestamp": "2024-12-09T13:25:22+09:00",
-    "tree_id": "659a4a56d2f2e892dd2c827128e7803025bfedcc",
-    "url": "https://github.com/codedynamis/ToolboxPlugin/commit/058d02504fcfac29d83ec94d805b05ca45691967"
+    "id": "7452bbc822c2f3a2d6e66b717ae00721f5c2dbd6",
+    "message": "Update ToolboxPlugin.csproj",
+    "timestamp": "2024-12-09T13:33:18+09:00",
+    "tree_id": "f60f5137239b3f32afafa221ab01c605f9874155",
+    "url": "https://github.com/codedynamis/ToolboxPlugin/commit/7452bbc822c2f3a2d6e66b717ae00721f5c2dbd6"
   },
   "organization": {
     "avatar_url": "https://avatars.githubusercontent.com/u/184860276?v=4",
@@ -148,9 +148,9 @@
     },
     "private": true,
     "pulls_url": "https://api.github.com/repos/codedynamis/ToolboxPlugin/pulls{/number}",
-    "pushed_at": 1733718328,
+    "pushed_at": 1733718803,
     "releases_url": "https://api.github.com/repos/codedynamis/ToolboxPlugin/releases{/id}",
-    "size": 10,
+    "size": 13,
     "ssh_url": "git@github.com:codedynamis/ToolboxPlugin.git",
     "stargazers": 0,
     "stargazers_count": 0,
@@ -163,7 +163,7 @@
     "teams_url": "https://api.github.com/repos/codedynamis/ToolboxPlugin/teams",
     "topics": [],
     "trees_url": "https://api.github.com/repos/codedynamis/ToolboxPlugin/git/trees{/sha}",
-    "updated_at": "2024-12-09T03:58:44Z",
+    "updated_at": "2024-12-09T04:25:32Z",
     "url": "https://github.com/codedynamis/ToolboxPlugin",
     "visibility": "private",
     "watchers": 0,
