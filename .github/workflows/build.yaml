@@ -1,0 +1,66 @@
+name: 'Build Plugin'
+
+on:
+  workflow_call:
+    inputs:
+      plugin-name:
+        required: true
+        type: string
+      dalamud-zip-url:
+        required: false
+        type: string
+        # https://github.com/goatcorp/dalamud-distrib
+        default: 'https://goatcorp.github.io/dalamud-distrib/stg/latest.zip'
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+          # GitVersion
+          fetch-depth: 0
+
+      - name: Download Dalamud
+        run: |
+          Invoke-WebRequest -Uri ${{ inputs.dalamud-zip-url }} -OutFile latest.zip
+          Expand-Archive -Force latest.zip "$env:AppData\XIVLauncher\addon\Hooks\dev\"
+      - name: Prepare Plugin Meta
+        run: |
+          $json_path = ".\${{ inputs.plugin-name }}\${{ inputs.plugin-name }}.json"
+          $json = Get-Content $json_path | ConvertFrom-Json -AsHashtable
+          echo "PLUGIN_AUTHOR=Copyright (c) $($json["Author"].Replace(",", "%2c"))" >> $env:GITHUB_ENV
+          echo "PLUGIN_DESCRIPTION=$($json["Description"].Replace(",", "%2c"))" >> $env:GITHUB_ENV
+      - name: Build Plugin
+        run: |
+          dotnet build `
+            --configuration Release `
+            -maxcpucount:2 `
+            /p:OutputPath=bin\CIRelease\ `
+            /p:Product=CustomPlugin `
+            /p:Company=CodeDynamis `
+            '/p:Copyright="${{ env.PLUGIN_AUTHOR }}"' `
+            '/p:AssemblyTitle="${{ env.PLUGIN_DESCRIPTION }}"'
+      - name: Rename Custom Plugin dll
+        run: |
+          pwd
+          ls ${{ inputs.plugin-name }}\bin\CIRelease\
+          mkdir "${{ inputs.plugin-name }}\bin\CIRelease\${{ inputs.plugin-name }}-zip"
+          Copy-Item "${{ inputs.plugin-name }}\bin\CIRelease\${{ inputs.plugin-name }}.dll" "${{ inputs.plugin-name }}\bin\CIRelease\${{ inputs.plugin-name }}-zip\${{ inputs.plugin-name }}.dll"
+          Copy-Item "${{ inputs.plugin-name }}\bin\CIRelease\${{ inputs.plugin-name }}.json" "${{ inputs.plugin-name }}\bin\CIRelease\${{ inputs.plugin-name }}-zip\${{ inputs.plugin-name }}.json"
+          Copy-Item "${{ inputs.plugin-name }}\bin\CIRelease\*.dll" "${{ inputs.plugin-name }}\bin\CIRelease\${{ inputs.plugin-name }}-zip\"
+          ls ${{ inputs.plugin-name }}\bin\CIRelease\
+          ls "${{ inputs.plugin-name }}\bin\CIRelease\${{ inputs.plugin-name }}-zip"
+          Compress-Archive -Force -Path "${{ inputs.plugin-name }}\bin\CIRelease\${{ inputs.plugin-name }}-zip\*" -DestinationPath "${{ inputs.plugin-name }}\bin\CIRelease\${{ inputs.plugin-name }}\latest.zip"
+      - name: Upload Artifact (release)
+        uses: actions/upload-artifact@v3
+        with:
+          name: '${{ inputs.plugin-name }}'
+          path: '${{ inputs.plugin-name }}\bin\CIRelease\${{ inputs.plugin-name }}'
+          if-no-files-found: error
