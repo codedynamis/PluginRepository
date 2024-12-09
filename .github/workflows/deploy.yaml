@@ -10,9 +10,9 @@ on:
         required: false
         type: string
         default: "codedynamis/PluginRepository"
-    secrets:
-      DEPLOY_GITHUB_TOKEN:
-        required: true
+    # secrets:
+    #   DEPLOY_GITHUB_TOKEN:
+    #     required: true
 
 permissions:
   actions: read
