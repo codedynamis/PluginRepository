@@ -2,7 +2,7 @@
   "Author": "codedynamis",
   "Name": "ToolboxPlugin",
   "InternalName": "ToolboxPlugin",
-  "AssemblyVersion": "1.0.0.0",
+  "AssemblyVersion": "1.0.0.1",
   "Description": "toolbox for codedynamis",
   "ApplicableVersion": "any",
   "RepoUrl": "https://github.com/codedynamis/ToolboxPlugin",
