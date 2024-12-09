@@ -1,7 +1,7 @@
 {
-  "after": "070bf42760287fe6e44d2d14e12b448902f72e98",
+  "after": "a4fa7ab11f88aa7130e1d9698e49f2301ab6b05c",
   "base_ref": null,
-  "before": "b8de76b5e06d54e566b2b3738c138479275af61b",
+  "before": "070bf42760287fe6e44d2d14e12b448902f72e98",
   "commits": [
     {
       "author": {
@@ -15,14 +15,14 @@
         "username": "a1hena"
       },
       "distinct": true,
-      "id": "070bf42760287fe6e44d2d14e12b448902f72e98",
-      "message": "1.0.0.1",
-      "timestamp": "2024-12-09T13:38:48+09:00",
-      "tree_id": "4f787591a8c3ad20a8f09d50790daae08866f00e",
-      "url": "https://github.com/codedynamis/ToolboxPlugin/commit/070bf42760287fe6e44d2d14e12b448902f72e98"
+      "id": "a4fa7ab11f88aa7130e1d9698e49f2301ab6b05c",
+      "message": "use DalamudService and fix NRE",
+      "timestamp": "2024-12-09T14:01:39+09:00",
+      "tree_id": "fda05e7cadf8c109e74b9d8e65be734f39757842",
+      "url": "https://github.com/codedynamis/ToolboxPlugin/commit/a4fa7ab11f88aa7130e1d9698e49f2301ab6b05c"
     }
   ],
-  "compare": "https://github.com/codedynamis/ToolboxPlugin/compare/b8de76b5e06d...070bf4276028",
+  "compare": "https://github.com/codedynamis/ToolboxPlugin/compare/070bf4276028...a4fa7ab11f88",
   "created": false,
   "deleted": false,
   "forced": false,
@@ -38,11 +38,11 @@
       "username": "a1hena"
     },
     "distinct": true,
-    "id": "070bf42760287fe6e44d2d14e12b448902f72e98",
-    "message": "1.0.0.1",
-    "timestamp": "2024-12-09T13:38:48+09:00",
-    "tree_id": "4f787591a8c3ad20a8f09d50790daae08866f00e",
-    "url": "https://github.com/codedynamis/ToolboxPlugin/commit/070bf42760287fe6e44d2d14e12b448902f72e98"
+    "id": "a4fa7ab11f88aa7130e1d9698e49f2301ab6b05c",
+    "message": "use DalamudService and fix NRE",
+    "timestamp": "2024-12-09T14:01:39+09:00",
+    "tree_id": "fda05e7cadf8c109e74b9d8e65be734f39757842",
+    "url": "https://github.com/codedynamis/ToolboxPlugin/commit/a4fa7ab11f88aa7130e1d9698e49f2301ab6b05c"
   },
   "organization": {
     "avatar_url": "https://avatars.githubusercontent.com/u/184860276?v=4",
@@ -148,7 +148,7 @@
     },
     "private": true,
     "pulls_url": "https://api.github.com/repos/codedynamis/ToolboxPlugin/pulls{/number}",
-    "pushed_at": 1733719134,
+    "pushed_at": 1733720505,
     "releases_url": "https://api.github.com/repos/codedynamis/ToolboxPlugin/releases{/id}",
     "size": 13,
     "ssh_url": "git@github.com:codedynamis/ToolboxPlugin.git",
@@ -163,7 +163,7 @@
     "teams_url": "https://api.github.com/repos/codedynamis/ToolboxPlugin/teams",
     "topics": [],
     "trees_url": "https://api.github.com/repos/codedynamis/ToolboxPlugin/git/trees{/sha}",
-    "updated_at": "2024-12-09T04:34:23Z",
+    "updated_at": "2024-12-09T04:38:58Z",
     "url": "https://github.com/codedynamis/ToolboxPlugin",
     "visibility": "private",
     "watchers": 0,
