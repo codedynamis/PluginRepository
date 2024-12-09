@@ -1,0 +1,21 @@
+{
+  "Author": "codedynamis",
+  "Name": "ToolboxPlugin",
+  "InternalName": "ToolboxPlugin",
+  "AssemblyVersion": "1.0.0.0",
+  "Description": "toolbox for codedynamis",
+  "ApplicableVersion": "any",
+  "RepoUrl": "https://github.com/codedynamis/ToolboxPlugin",
+  "Tags": [
+    "Other"
+  ],
+  "DalamudApiLevel": 11,
+  "LoadRequiredState": 0,
+  "LoadSync": false,
+  "CanUnloadAsync": false,
+  "LoadPriority": 0,
+  "ImageUrls": [],
+  "IconUrl": "",
+  "Punchline": "ToolboxPlugin",
+  "AcceptsFeedback": true
+}
